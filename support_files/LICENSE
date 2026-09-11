@@ -1,0 +1,26 @@
+CeCILL-B Licence Notice
+======================
+
+This software is distributed under the CeCILL-B free software licence.
+
+Authors and contributors include:
+
+- Abdallah Abdallah, Lab-STICC, UMR 6284, Universite Bretagne Sud
+- Bertrand Le Gal
+- Camille Moniere
+- Emmanuel Boutillon
+
+The non-binary polar decoder software used by this simulator is mainly from
+Bertrand Le Gal and collaborators. This notice does not assign or transfer
+ownership; it records the licence used for distributing this simulator package.
+
+The full CeCILL-B licence text is available from the official CeCILL site:
+
+https://cecill.info/licences/Licence_CeCILL-B_V1-en.html
+
+For distribution, keep this LICENSE file with the source code, MATLAB files,
+MEX binary, and DLL binary. The licence notice in each source file should also
+be preserved.
+
+This work has been funded by the French ANR project MIOT under grant
+Projet-ANR-24-CE93-0017.

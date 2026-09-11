@@ -1,0 +1,35 @@
+# MATLAB autosave and temporary files
+*.asv
+*.m~
+*.autosave
+
+# MATLAB generated folders
+slprj/
+codegen/
+*.slxc
+
+# C/C++ build outputs
+build/
+build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+*.obj
+*.o
+*.a
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.exe
+
+# Logs and local results
+*.log
+results/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
