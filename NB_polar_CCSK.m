@@ -59,8 +59,15 @@ tic
 code_length = 128;         % N: original code length
 transmitted_length = 128;  % Ns: length after shortening
 information_length = 90;   % K: number of information symbols
-gf_size = 64;              % q: number of GF symbols
+gf_size = 256;              % q: number of GF symbols
 snr_db = -7.5;
+max_frames =4e4;
+frames_per_call = 200;
+num_threads = 4;          % Number of decoder threads inside the MEX
+random_seed = 0;
+progress_interval = 100;   % Update the display every this many frames
+
+decoder_type = 'dec4';
 % Decoder choices supported by the MEX/DLL pair attached with this simulator.
 % SC decoders:
 %   dec1 or naive       : naive SC decoder, no fast cancellation/pruning.
@@ -94,14 +101,7 @@ snr_db = -7.5;
 %   scf_naive_f32{T},          f_scf_naive_f32{T}
 %   scf_related_f32{T},        f_scf_related_f32{T}
 %
-% Not supported by the simple MEX: oracle decoders, scl_zc_f32_e/f_scl_zc_f32_e.
-decoder_type = 'dec4';
 
-max_frames =4e4;
-frames_per_call = 2000;
-num_threads = 4;          % Number of decoder threads inside the MEX
-random_seed = 0;
-progress_interval = 100;   % Update the display every this many frames
 
 %% Setup
 script_folder = fileparts(mfilename('fullpath'));
