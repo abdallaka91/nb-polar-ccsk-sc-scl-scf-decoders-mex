@@ -56,7 +56,7 @@ tic
 % MEX accepts q = 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096.
 % This simulator also needs reliability data for (N,q) and a CCSK sequence for q.
 code_length = 128;         % N: original code length
-transmitted_length = 128;  % Ns: length after shortening
+transmitted_length = 126;  % Ns: length after shortening
 information_length = 90;   % K: number of information symbols
 gf_size = 256;              % q: number of GF symbols
 snr_db = -7.5;
