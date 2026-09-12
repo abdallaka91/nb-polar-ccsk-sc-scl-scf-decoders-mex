@@ -45,7 +45,6 @@
 %   decoder_type       : MEX/DLL decoder selection string.
 %   max_frames         : Number of simulated frames.
 %   frames_per_call    : Number of frames sent to the MEX at once.
-%   num_threads        : Number of decoder instances/threads used by the MEX.
 %
 % OUTPUT:
 %   Console output with progressive FER estimation at the configured SNR.
@@ -63,11 +62,10 @@ gf_size = 256;              % q: number of GF symbols
 snr_db = -7.5;
 max_frames =4e4;
 frames_per_call = 200;
-num_threads = 4;          % Number of decoder threads inside the MEX
 random_seed = 0;
 progress_interval = 100;   % Update the display every this many frames
 
-decoder_type = 'dec4';
+decoder_type = 'scl_spec_f32{4}';
 % Decoder choices supported by the MEX/DLL pair attached with this simulator.
 % SC decoders:
 %   dec1 or naive       : naive SC decoder, no fast cancellation/pruning.
@@ -135,7 +133,7 @@ noise_std = sqrt(1 / 10^(snr_db/10));
 % Allocate once; automatically choose N-Ns shortened positions and the frozen inputs.
 % The MEX expects a most-to-least reliability permutation using indices 1:N.
 [initialized, decoder_config] = nbdecode_mex('init', decoder_type, ...
-    code_length, gf_size, information_length, transmitted_length, reliability_order, num_threads);
+    code_length, gf_size, information_length, transmitted_length, reliability_order);
 assert(initialized);
 % Use these input positions for information symbols; all other inputs stay zero.
 information_positions = decoder_config.information_positions;
