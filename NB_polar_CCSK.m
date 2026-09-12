@@ -55,10 +55,10 @@ tic
 % MEX accepts N = 2, 4, 8, ..., 65536 (powers of two).
 % MEX accepts q = 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096.
 % This simulator also needs reliability data for (N,q) and a CCSK sequence for q.
-code_length = 128;         % N: original code length
-transmitted_length = 126;  % Ns: length after shortening
-information_length = 90;   % K: number of information symbols
-gf_size = 256;              % q: number of GF symbols
+code_length = 64;         % N: original code length
+transmitted_length = 64;  % Ns: length after shortening
+information_length = 42;   % K: number of information symbols
+gf_size = 64;              % q: number of GF symbols
 snr_db = -7.5;
 max_frames =4e4;
 frames_per_call = 200;
